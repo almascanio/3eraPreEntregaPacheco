@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: brown;
+    color: beige;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: beige;
+    color: brown;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+}
+
+.parrafo{
+    padding: 10px;
+    font-size: 2rem;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.intro{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: beige;
+}
+
+.marcador{
+    display: flex;
+    align-items: center;
+    background-color: beige;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    color: brown;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.marcador .nombre{
+    position: absolute;
+    background-color: brown;
+    color: beige;
+    line-height: 1;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 3px solid beige;
+}
+
+.marcador .nombre-jugador{
+    right: 90%;
+    font-size: 2rem;
+}
+
+.marcador .nombre-enemigo{
+    left: 90%;
+    font-size: 2rem;
+}
+
+.marcador .puntos {
+    font-size: 2rem;
+}
+
+.tu-ataque{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.tu-ataque h2{
+    color: beige;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.ataques{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.ataque{
+    background-color: beige;
+    font-size: 2rem;
+    border: 0;
+    padding: .5rem;
+    border-radius: .5rem;
+    width: 100px;
+    height: 100px;
+    color: brown;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.mensaje{
+    margin-bottom: 2rem;
+    line-height: 2;
+}
+
+.mensaje .eleccion{
+    color: brown;
+    background-color: beige;
+    border-radius: 0.25rem;
+    padding-inline: 0.25rem;
+}
+
+.button{
+    border: 0;
+    line-height: 1;
+    background-color: beige;
+    color: brown;
+    font-size: 1rem;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.disabled{
+    flex: none;
+}
