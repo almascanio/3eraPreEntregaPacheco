@@ -6,12 +6,12 @@ const ganaPunto = document.querySelector('#punto')
 const ataque = document.querySelector('#tu-ataque')
 const eleccionJugador = document.querySelector('#eleccion-jugador')
 const eleccionEnemigo = document.querySelector('#eleccion-enemigo')
+const empezarDeCero = document.querySelector('reiniciar')
 
 let puntoJug = 0; 
 let puntoEne = 0;
 let loQueEscogioJug; 
 let loQueEscogioEne;
-
 
 
 let opcionAtaque = document.querySelectorAll('.ataque')
@@ -22,17 +22,20 @@ opcionAtaque.forEach( opcion => {
 function iniciarJuego(evento){
     let loQueEscogioEne = Math.floor(Math.random() * 3);
     let loQueEscogioJug = evento.currentTarget.id;
+    let enemigo; 
+
+    console.log(evento.currentTarget);
 
     // piedra = 0
     // papel = 1
     // tijera = 2 
 
-    if (loQueEscogioEne === 0){
-        loQueEscogioEne = 'Piedra'; 
-    } else if (loQueEscogioEne === 1){
-        loQueEscogioEne = 'Papel';
-    } else if (loQueEscogioEne === 2){
-        loQueEscogioEne = 'Tijera'
+    if (loQueEscogioEne == 0){
+        enemigo = 'piedra'; 
+    } else if (loQueEscogioEne == 1){
+        enemigo = 'papel';
+    } else if (loQueEscogioEne == 2){
+        enemigo = 'tijera'
     }
 
     // piedra contra tijera 
@@ -41,23 +44,23 @@ function iniciarJuego(evento){
     // si no empate 
 
     if (
-        (loQueEscogioJug === 'Piedra' && loQueEscogioEne === 'Tijera') ||
-        (loQueEscogioJug === 'Papel' && loQueEscogioEne === 'Piedra') ||
-        (loQueEscogioJug === 'Tijera' && loQueEscogioEne === 'Papel')
+        (loQueEscogioJug == 'piedra' && enemigo == 'tijera') ||
+        (loQueEscogioJug == 'papel' && enemigo == 'piedra') ||
+        (loQueEscogioJug == 'tijera' && enemigo == 'papel')
 ){
-    ganadorJugado();
+    ganaJugador();
 } else if (
-        (loQueEscogioEne === 'Piedra' && loQueEscogioJug === 'Tijera') ||
-        (loQueEscogioEne === 'Papel' && loQueEscogioJug === 'Piedra') ||
-        (loQueEscogioEne === 'Tijera' && loQueEscogioJug === 'Papel')
+        (enemigo == 'piedra' && loQueEscogioJug == 'tijera') ||
+        (enemigo == 'papel' && loQueEscogioJug == 'piedra') ||
+        (enemigo == 'tijera' && loQueEscogioJug == 'papel')
 ) {
-    ganadorEnemigo();
+    ganaEnemigo();
 } else {
     empate();
 }
     mensaje.classList.remove('disabled')
     eleccionJugador.innerText = loQueEscogioJug;
-    eleccionEnemigo.innerText = loQueEscogioEne;
+    eleccionEnemigo.innerText = enemigo;
 
     if (puntoJug === 3 || puntoEne === 3) {
 
@@ -66,17 +69,17 @@ function iniciarJuego(evento){
         }
 
         if (puntoEne === 3) {
-            instru.innerText =  '¡La computadora ganó el juego!'
+            instru.innerText =  '¡El enemigo gano el juego!'
         }
 
         ataque.classList.add("disabled");
-        volverAJugar.classList.remove("disabled");
-        volverAJugar.addEventListener("click", volverAJugarDeNuevo);
+        reiniciar.classList.remove("disabled");
+        reiniciar.addEventListener("click", volverAJugar);
     }
 
 }
 
-function ganaUsuario(){
+function ganaJugador(){
     puntoJug++;
     puntosJugador.innerText = puntoJug;
     ganaPunto.innerText = 'Ganaste un punto';
@@ -92,8 +95,8 @@ function empate(){
     ganaPunto.innerText = 'Empate';
 }
 
-function volverAJugarDeNuevo() {
-    volverAJugar.classList.add("disabled");
+function volverAJugar() {
+    reiniciar.classList.add("disabled");
     ataque.classList.remove("disabled");
     mensaje.classList.add("disabled");
 
