@@ -73,8 +73,8 @@ function iniciarJuego(evento){
         }
 
         ataque.classList.add("disabled");
-        reiniciar.classList.remove("disabled");
-        reiniciar.addEventListener("click", volverAJugar);
+        empezarDeCero.classList.remove("disabled");
+        empezarDeCero.addEventListener("click", volverAJugar);
     }
 
 }
@@ -96,7 +96,7 @@ function empate(){
 }
 
 function volverAJugar() {
-    reiniciar.classList.add("disabled");
+    empezarDeCero.classList.add("disabled");
     ataque.classList.remove("disabled");
     mensaje.classList.add("disabled");
 
