@@ -1,3 +1,4 @@
+// querySelector
 let puntosJugador = 0;
 let puntosEnemigo = 0;
 
