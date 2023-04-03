@@ -1,111 +1,113 @@
-const instru = document.querySelector('#intro')
-const puntosJugador = document.querySelector('#puntos-jugador')
-const puntosEnemigo = document.querySelector('#puntos-enemigo')
-const mensaje = document.querySelector('#mensaje')
-const ganaPunto = document.querySelector('#punto')
-const ataque = document.querySelector('#tu-ataque')
-const eleccionJugador = document.querySelector('#eleccion-jugador')
-const eleccionEnemigo = document.querySelector('#eleccion-enemigo')
-const empezarDeCero = document.querySelector('reiniciar')
+let puntosJugador = 0;
+let puntosEnemigo = 0;
 
-let puntoJug = 0; 
-let puntoEne = 0;
-let loQueEscogioJug; 
-let loQueEscogioEne;
+let instrucciones = document.querySelector("#instrucciones");
+let marcadorPuntosJugador = document.querySelector("#puntos-jugador");
+let marcadorPuntosEnemigo = document.querySelector("#puntos-enemigo");
+let mensaje = document.querySelector("#mensaje");
+let ganaPunto = document.querySelector("#gana-punto");
+let eligeTuAtaque = document.querySelector("#elige-tu-ataque");
 
+let mensajeEleccionJugador = document.querySelector("#eleccion-jugador");
+let mensajeEleccionEnemigo = document.querySelector("#eleccion-enemigo");
 
-let opcionAtaque = document.querySelectorAll('.ataque')
-opcionAtaque.forEach( opcion => {
-    opcion.addEventListener("click", iniciarJuego);
+let empezarDeNuevo = document.querySelector('#reiniciar')
+
+let ataquesJugador = document.querySelectorAll(".ataque");
+ataquesJugador.forEach(boton => {
+    boton.addEventListener("click", iniciarJuego);
 });
 
-function iniciarJuego(evento){
-    let loQueEscogioEne = Math.floor(Math.random() * 3);
-    let loQueEscogioJug = evento.currentTarget.id;
-    let enemigo; 
+function iniciarJuego(evento) {
 
-    console.log(evento.currentTarget);
+    let eleccionEnemigo = Math.floor(Math.random() * 3);
+    let eleccionJugador = evento.currentTarget.id;
+
 
     // piedra = 0
     // papel = 1
-    // tijera = 2 
+    // tijera = 2
 
-    if (loQueEscogioEne == 0){
-        enemigo = 'piedra'; 
-    } else if (loQueEscogioEne == 1){
-        enemigo = 'papel';
-    } else if (loQueEscogioEne == 2){
-        enemigo = 'tijera'
+    if (eleccionEnemigo === 0) {
+        eleccionEnemigo = "piedra";
+    } else if (eleccionEnemigo === 1) {
+        eleccionEnemigo = "papel"
+    } else if (eleccionEnemigo === 2) {
+        eleccionEnemigo = "tijera"
     }
 
-    // piedra contra tijera 
-    // papel contra piedra 
+    // piedra contra tijera
     // tijera contra papel
-    // si no empate 
+    // papel contra piedra
+    // iguales es empate
 
     if (
-        (loQueEscogioJug == 'piedra' && enemigo == 'tijera') ||
-        (loQueEscogioJug == 'papel' && enemigo == 'piedra') ||
-        (loQueEscogioJug == 'tijera' && enemigo == 'papel')
-){
-    ganaJugador();
-} else if (
-        (enemigo == 'piedra' && loQueEscogioJug == 'tijera') ||
-        (enemigo == 'papel' && loQueEscogioJug == 'piedra') ||
-        (enemigo == 'tijera' && loQueEscogioJug == 'papel')
-) {
-    ganaEnemigo();
-} else {
-    empate();
-}
-    mensaje.classList.remove('disabled')
-    eleccionJugador.innerText = loQueEscogioJug;
-    eleccionEnemigo.innerText = enemigo;
-
-    if (puntoJug === 3 || puntoEne === 3) {
-
-        if (puntoJug === 3) {
-            instru.innerText = '¡Ganaste el juego!'
-        }
-
-        if (puntoEne === 3) {
-            instru.innerText =  '¡El enemigo gano el juego!'
-        }
-
-        ataque.classList.add("disabled");
-        empezarDeCero.classList.remove("disabled");
-        empezarDeCero.addEventListener("click", volverAJugar);
+        (eleccionJugador === "piedra" && eleccionEnemigo === "tijera") ||
+        (eleccionJugador === "tijera" && eleccionEnemigo === "papel") ||
+        (eleccionJugador === "papel" && eleccionEnemigo === "piedra")
+    ) {
+        ganaUsuario();
+    } else if (
+        (eleccionEnemigo === "piedra" && eleccionJugador === "tijera") ||
+        (eleccionEnemigo === "tijera" && eleccionJugador === "papel") ||
+        (eleccionEnemigo === "papel" && eleccionJugador === "piedra")
+    ) {
+        ganaPC();
+    } else {
+        empate();
     }
 
+    mensaje.classList.remove("disabled");
+    mensajeEleccionJugador.innerText = eleccionJugador;
+    mensajeEleccionEnemigo.innerText = eleccionEnemigo;
+
+    if (puntosJugador === 3 || puntosEnemigo === 3) {
+
+        if (puntosJugador === 3) {
+            instrucciones.innerText = "¡Ganaste el juego!"
+        }
+
+        if (puntosEnemigo === 3) {
+            instrucciones.innerText = "¡El enemigo ganó el juego!"
+        }
+
+        eligeTuAtaque.classList.add("disabled");
+        empezarDeNuevo.classList.remove("disabled");
+        empezarDeNuevo.addEventListener("click", reiniciarJuego);
+    }
+
+
 }
 
-function ganaJugador(){
-    puntoJug++;
-    puntosJugador.innerText = puntoJug;
-    ganaPunto.innerText = 'Ganaste un punto';
+function ganaUsuario() {
+    puntosJugador++;
+    marcadorPuntosJugador.innerText = puntosJugador;
+    ganaPunto.innerText = "¡Ganaste un punto!"
 }
 
-function ganaEnemigo(){
-    puntoEne++;
-    puntosEnemigo.innerText = puntoEne;
-    ganaPunto.innerText = 'Gano punto el enemigo';
+function ganaPC() {
+    puntosEnemigo++;
+    marcadorPuntosEnemigo.innerText = puntosEnemigo;
+    ganaPunto.innerText = "¡El enemigo ganó un punto!"
 }
 
-function empate(){
-    ganaPunto.innerText = 'Empate';
+function empate() {
+    ganaPunto.innerText = "¡Empate!"
 }
 
-function volverAJugar() {
-    empezarDeCero.classList.add("disabled");
-    ataque.classList.remove("disabled");
+function reiniciarJuego() {
+    empezarDeNuevo.classList.add("disabled");
+    eligeTuAtaque.classList.remove("disabled");
     mensaje.classList.add("disabled");
 
-    let puntoJug = 0; 
-    let puntoEne = 0;
+    puntosJugador = 0;
+    puntosEnemigo = 0;
 
-    puntosJugador.innerText = puntoJug;
-    puntosEnemigo.innerText = puntoEne;
+    marcadorPuntosJugador.innerText = puntosJugador;
+    marcadorPuntosEnemigo.innerText = puntosEnemigo;
 
-    instru.innerText = "El primero en llegar a 3 puntos gana."
+    instrucciones.innerText = "El primero en llegar a 3 puntos gana"
 }
+
+
 

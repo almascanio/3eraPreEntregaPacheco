@@ -1,22 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Heebo', sans-serif;
 }
 
-body{
+body {
     background-color: brown;
     color: beige;
 }
 
-header{
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
-    font-size: 2rem;
+    padding: 3rem;
     background-color: beige;
     color: brown;
     border-bottom-left-radius: 2rem;
@@ -25,120 +24,120 @@ header{
     border-top-left-radius: 2rem;
 }
 
+h1{
+    font-size: 3rem;
+}
+
 .parrafo{
     padding: 10px;
     font-size: 2rem;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
+    margin: 1rem;
     text-align: center;
-    padding: 10px;
-    margin: 10px;
 }
 
-.intro{
+.instrucciones {
     margin-bottom: 2rem;
-    font-size: 2rem;
-    color: beige;
+    font-size: 1.5rem;
 }
 
-.marcador{
-    display: flex;
-    align-items: center;
+.marcador {
     background-color: beige;
     padding: 1rem 2rem;
     border-radius: 1rem;
-    color: brown;
-    font-weight: 700;
-    margin-bottom: 2rem;
     position: relative;
+    display: flex;
+    align-items: center;
+    color: brown;
+    font-weight: 600;
+    margin-bottom: 2rem;
 }
 
-.marcador .nombre{
+.marcador .nombre {
     position: absolute;
-    background-color: brown;
     color: beige;
+    background-color: brown;
     line-height: 1;
     padding: .5rem;
     border-radius: .5rem;
-    border: 3px solid beige;
+    border: 2px solid beige;
+
 }
 
-.marcador .nombre-jugador{
-    right: 90%;
-    font-size: 2rem;
+.marcador .nombre-jugador {
+    right: 85%;
 }
 
-.marcador .nombre-enemigo{
-    left: 90%;
-    font-size: 2rem;
+.marcador .nombre-enemigo {
+    left: 85%;
 }
 
 .marcador .puntos {
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
-.tu-ataque{
+h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.elige-tu-ataque {
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     gap: 2rem;
 }
 
-.tu-ataque h2{
-    color: beige;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-.ataques{
+.ataques {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
-.ataque{
+.ataque {
+    font-size: 2rem;
     background-color: beige;
-    font-size: 2rem;
     border: 0;
     padding: .5rem;
-    border-radius: .5rem;
     width: 100px;
     height: 100px;
-    color: brown;
-    font-weight: 600;
+    border-radius: .5rem;
     cursor: pointer;
 }
 
-.mensaje{
+.mensaje {
     margin-bottom: 2rem;
     line-height: 2;
 }
 
-.mensaje .eleccion{
+.mensaje .eleccion {
     color: brown;
     background-color: beige;
-    border-radius: 0.25rem;
-    padding-inline: 0.25rem;
+    border-radius: .25rem;
+    padding-inline: .25rem;
 }
 
-.button{
+.button {
     border: 0;
     line-height: 1;
     background-color: beige;
     color: brown;
     font-size: 1rem;
-    padding: 1.5rem;
+    padding: .5rem;
     border-radius: .5rem;
     cursor: pointer;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
 }
 
-.disabled{
-    flex: none;
+.disabled {
+    display: none;
 }

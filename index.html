@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,21 +10,25 @@
 <body>
     <header>
         <h1>Piedra, Papel y Tijera</h1>
-        <p class="parrafo">Diviertete mucho</p>
+        <p class="parrafo">Diviertete mucho!</p>
     </header>
     <main>
-        <p class="intro" id="intro">Empieza el juego: El primero en llegar a 3 puntos gana!</p>
+        <p class="instrucciones" id="instrucciones">
+            El primero en llegar a 3 puntos gana
+        </p>
         <div class="marcador">
             <p class="nombre nombre-jugador">Jugador</p>
             <p class="nombre nombre-enemigo">Enemigo</p>
             <p class="puntos">
                 <span id="puntos-jugador">0</span>
-                <span></span>
+                <span>-</span>
                 <span id="puntos-enemigo">0</span>
             </p>
         </div>
-        <div class="tu-ataque" id="tu-ataque">
-            <h2>Elige muy bien tu ataque</h2>
+
+        <h2>Elige muy bien tu ataque, para cada turno</h2>
+
+        <div class="elige-tu-ataque" id="elige-tu-ataque">
             <div class="ataques">
                 <img src="./img/Piedra.png" alt="" class="ataque" id="piedra">
                 <img src="./img/Papel.png" alt="" class="ataque" id="papel">
@@ -33,12 +37,12 @@
         </div>
         <div class="mensaje disabled" id="mensaje">
             <p>
-                Tu usaste <span class="eleccion" id="eleccion-jugador">Papel</span><br>
-                El enemigo uso <span class="eleccion" id="eleccion-enemigo">Tijera</span>
+                Tu usaste <span class="eleccion" id="eleccion-jugador">papel</span><br>
+                y el enemigo usó <span class="eleccion" id="eleccion-enemigo">papel</span>
             </p>
-            <p id="punto">Sumaste un punto</p>
+            <p id="gana-punto">¡Ganaste un punto!</p>
         </div>
-        <button class="button disabled" id="reiniciar">Reiniciar Juego</button>
+        <button class="button disabled" id="reiniciar">Reiniciar juego</button>
     </main>
     <script src="./js/base.js"></script>
     <script src="./js/main.js"></script>
