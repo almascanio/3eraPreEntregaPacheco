@@ -1,6 +1,7 @@
 // querySelector
 let puntosJugador = 0;
 let puntosEnemigo = 0;
+let historialDeJuego = []; 
 
 let instrucciones = document.querySelector("#instrucciones");
 let marcadorPuntosJugador = document.querySelector("#puntos-jugador");
@@ -23,7 +24,6 @@ function iniciarJuego(evento) {
 
     let eleccionEnemigo = Math.floor(Math.random() * 3);
     let eleccionJugador = evento.currentTarget.id;
-
 
     // piedra = 0
     // papel = 1
@@ -58,6 +58,7 @@ function iniciarJuego(evento) {
         empate();
     }
 
+
     mensaje.classList.remove("disabled");
     mensajeEleccionJugador.innerText = eleccionJugador;
     mensajeEleccionEnemigo.innerText = eleccionEnemigo;
@@ -77,7 +78,9 @@ function iniciarJuego(evento) {
         empezarDeNuevo.addEventListener("click", reiniciarJuego);
     }
 
-
+    localStorage.setItem("puntosJugador", puntosJugador)
+    localStorage.setItem("puntosEnemigo", puntosEnemigo)
+    localStorage.setItem("historialDeJuego", historialDeJuego)
 }
 
 function ganaUsuario() {
