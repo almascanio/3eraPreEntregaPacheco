@@ -1,7 +1,6 @@
 // querySelector
 let puntosJugador = 0;
 let puntosEnemigo = 0;
-let historialDeJuego = []; 
 
 let instrucciones = document.querySelector("#instrucciones");
 let marcadorPuntosJugador = document.querySelector("#puntos-jugador");
@@ -13,7 +12,39 @@ let eligeTuAtaque = document.querySelector("#elige-tu-ataque");
 let mensajeEleccionJugador = document.querySelector("#eleccion-jugador");
 let mensajeEleccionEnemigo = document.querySelector("#eleccion-enemigo");
 
-let empezarDeNuevo = document.querySelector('#reiniciar')
+let empezarDeNuevo = document.querySelector('#reiniciar');
+let verMas = document.querySelector('#verMas');
+
+Swal.fire({
+    title: 'Bienvenid@ al juego:',
+    text: 'Piedra, Papel y Tijera es uno de los juegos mas tradicionales en todo el mundo, espero te guste!',
+    imageUrl: 'https://image.freepik.com/foto-gratis/ninos-jugando-papel-tijeras-piedra_23-2148210540.jpg',
+    imageWidth: 400,
+    imageHeight: 250,
+    imageAlt: 'Imagen del juego piedra, papel y tijera',
+    confirmButtonText : 'Jugar',
+    width: '30%',
+    background: "beige",
+    grow: 'fullscreen',
+    confirmButtonColor: 'brown',
+    showCancelButton: 'true',
+
+    customClass: {
+        container: '',
+        popup: '',
+        header: '',
+        title: '',
+        closeButton: '',
+        icon: '',
+        image: '',
+        content: '',
+        input: '',
+        actions: '',
+        confirmButton: '',
+        cancelButoon: '',
+        footer: '',
+    }
+})
 
 let ataquesJugador = document.querySelectorAll(".ataque");
 ataquesJugador.forEach(boton => {
@@ -75,12 +106,9 @@ function iniciarJuego(evento) {
 
         eligeTuAtaque.classList.add("disabled");
         empezarDeNuevo.classList.remove("disabled");
+        verMas.classList.remove("disabled");
         empezarDeNuevo.addEventListener("click", reiniciarJuego);
     }
-
-    localStorage.setItem("puntosJugador", puntosJugador)
-    localStorage.setItem("puntosEnemigo", puntosEnemigo)
-    localStorage.setItem("historialDeJuego", historialDeJuego)
 }
 
 function ganaUsuario() {
@@ -103,6 +131,7 @@ function reiniciarJuego() {
     empezarDeNuevo.classList.add("disabled");
     eligeTuAtaque.classList.remove("disabled");
     mensaje.classList.add("disabled");
+    verMas.classList.add("disabled");
 
     puntosJugador = 0;
     puntosEnemigo = 0;

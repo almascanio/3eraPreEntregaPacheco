@@ -1,0 +1,82 @@
+[
+    {
+        "nombre": "Parchis",
+        "imgDelJuego": "https://blogsaverroes.juntadeandalucia.es/educacionenlaescuela/files/2020/05/como-jugar-al-parchis.jpg",
+        "edadRecomendada": "6 años en adelante",
+        "jugadoresMinimo": "2 jugadores minimo",
+        "jugadoresMaximo": "4 jugadores maximo",
+        "materialDeJuego": "Se necesitan fichas, dados, hoja y lapicera para anotar"
+    },
+    {
+        "nombre": "Domino",
+        "imgDelJuego": "https://atabales.net/wp-content/uploads/2018/12/juego-de-domino.jpg",
+        "edadRecomendada": "6 años en adelante",
+        "jugadoresMinimo": "2 jugadores minimo",
+        "jugadoresMaximo": "4 jugadores maximo",
+        "materialDeJuego": "Se necesitan fichas, hoja y lapicera para anotar"
+    },
+    {
+        "nombre": "Monopolio",
+        "imgDelJuego": "https://images2.alphacoders.com/652/652776.jpg",
+        "edadRecomendada": "8 años en adelante",
+        "jugadoresMinimo": "2 jugadores minimo",
+        "jugadoresMaximo": "8 jugadores maximo",
+        "materialDeJuego": "Se necesita tablero, dinero, bandeja del banquero, fichas, dados, cartas, casas y hoteles"
+    },
+    {
+        "nombre": "Damas",
+        "imgDelJuego": "https://tablegames.com.br/wp-content/uploads/2017/10/20180513_203205_HDR-1024x576.jpg",
+        "edadRecomendada": "8 años en adelante",
+        "jugadoresMinimo": "Tienen que ser si o si 2",
+        "jugadoresMaximo": "2 jugadores maximo, mas no",
+        "materialDeJuego": "Se necesita tablero y piezas correspondientes"
+    },
+    {
+        "nombre": "Ajedrez",
+        "imgDelJuego": "https://images.chesscomfiles.com/uploads/images_users/tiny_mce/alfilinquieto/phpCsbkEh.jpeg",
+        "edadRecomendada": "8 años en adelante",
+        "jugadoresMinimo": "Tienen que ser si o si 2",
+        "jugadoresMaximo": "2 jugadores maximo, mas no",
+        "materialDeJuego": "Se necesita tablero y piezas correspondientes, ademas de contador para el tiempo"
+    },
+    {
+        "nombre": "Poker",
+        "imgDelJuego": "https://cazinoz.ro/wp-content/uploads/2020/02/AdobeStock_270977739.jpeg",
+        "edadRecomendada": "18 años en adelante ya que es un juego de apuestas, menos sin apuestas",
+        "jugadoresMinimo": "2 jugadores minimo",
+        "jugadoresMaximo": "7 jugadores maximo",
+        "materialDeJuego": "Se necesitan cartas, maletin con fichas y un tapete"
+    },
+    {
+        "nombre": "Truco",
+        "imgDelJuego": "https://th.bing.com/th/id/OIP.JMTd-xZWwwoPPSckhd0x4AHaE5?pid=ImgDet&rs=1",
+        "edadRecomendada": "18 años en adelante ya que es un juego de apuestas, menos sin apuestas",
+        "jugadoresMinimo": "2 jugadores minimo",
+        "jugadoresMaximo": "6 jugadores maximo",
+        "materialDeJuego": "Se necesitan cartas españolas, hoja y lapicera para anotar"
+    },
+    {
+        "nombre": "Bingo",
+        "imgDelJuego": "https://http2.mlstatic.com/deluxe-bingo-juego-de-mesa-los-estilos-pueden-variar-D_NQ_NP_770648-MCO25750000625_072017-F.jpg",
+        "edadRecomendada": "6 años en adelante",
+        "jugadoresMinimo": "2 jugadores minimo",
+        "jugadoresMaximo": "Sin limites de jugadores",
+        "materialDeJuego": "Se necesita bolillero, bolas de numero, cartones, mesas y para marcar"
+    },
+    {
+        "nombre": "Jenga",
+        "imgDelJuego": "https://image.freepik.com/foto-gratis/jovenes-creadores-jugando-jenga-coworking-place_99043-1646.jpg",
+        "edadRecomendada": "6 años en adelante",
+        "jugadoresMinimo": "2 jugadores minimo",
+        "jugadoresMaximo": "4 jugadores maximo",
+        "materialDeJuego": "Se necesita una sola cosa un jenga (Bloques)"
+    },
+    {
+        "nombre": "Chichon",
+        "imgDelJuego": "https://okdiario.com/img/2018/04/01/como-jugar-al-chinchon-655x368.jpg",
+        "edadRecomendada": "18 años en adelante ya que es un juego de apuestas, menos sin apuestas",
+        "jugadoresMinimo": "2 jugadores minimo",
+        "jugadoresMaximo": "8 jugadores maximo",
+        "materialDeJuego": "Se necesitan cartas españolas, hoja y lapicera para anotar"
+    }
+]
