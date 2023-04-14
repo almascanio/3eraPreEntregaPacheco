@@ -6,7 +6,7 @@ datos.addEventListener("click", () => {
         return respuesta.json()
     })
     .then((data) => {
-       juegosArray(data)
+        juegosArray(data)
     })
     .catch((error) => {
         console.log("Error vuelve a intentarlo", error)
@@ -30,9 +30,10 @@ function juegosArray(posiblesJuegos){
             <p class="maximo">${juegos.jugadoresMaximo}</p>
             <p class="material">${juegos.materialDeJuego}</p>
         </div>
-        <hr>
+        <hr class="linea">
         `
     });
 
     contenido.innerHTML = html
+    datos.classList.add("disabled");
 }

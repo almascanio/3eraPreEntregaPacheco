@@ -15,36 +15,40 @@ let mensajeEleccionEnemigo = document.querySelector("#eleccion-enemigo");
 let empezarDeNuevo = document.querySelector('#reiniciar');
 let verMas = document.querySelector('#verMas');
 
+// Libreria SweetAlert2 para darle la bienvenida al jugador 
+
 Swal.fire({
     title: 'Bienvenid@ al juego:',
-    text: 'Piedra, Papel y Tijera es uno de los juegos mas tradicionales en todo el mundo, espero te guste!',
+    text: 'Piedra, Papel o Tijera es uno de los juegos mas tradicionales en todo el mundo, espero te guste!',
     imageUrl: 'https://image.freepik.com/foto-gratis/ninos-jugando-papel-tijeras-piedra_23-2148210540.jpg',
     imageWidth: 400,
     imageHeight: 250,
-    imageAlt: 'Imagen del juego piedra, papel y tijera',
+    imageAlt: 'Imagen del juego piedra, papel o tijera',
     confirmButtonText : 'Jugar',
     width: '30%',
     background: "beige",
     grow: 'fullscreen',
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    allowEnterKey: false, 
     confirmButtonColor: 'brown',
     showCancelButton: 'true',
 
     customClass: {
-        container: '',
-        popup: '',
+        popup: 'ventanaPopup',
         header: '',
-        title: '',
+        title: 'ventanaTitulo',
         closeButton: '',
         icon: '',
-        image: '',
-        content: '',
+        image: 'VentanaImg',
+        content: 'VentanaContenido',
         input: '',
         actions: '',
         confirmButton: '',
         cancelButoon: '',
-        footer: '',
-    }
-})
+        footer: ''
+    },
+});
 
 let ataquesJugador = document.querySelectorAll(".ataque");
 ataquesJugador.forEach(boton => {

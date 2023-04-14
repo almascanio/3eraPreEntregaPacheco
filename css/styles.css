@@ -135,11 +135,16 @@ h2 {
     border: 0;
     line-height: 1;
     background-color: beige;
-    color: brown;
+    color: #a52a2a;
     font-size: 1rem;
     padding: .5rem;
     border-radius: .5rem;
     font-weight: 600;
+    box-shadow: 0 0 5px beige, 0 0 25px beige;
+}
+
+.button:hover{
+    box-shadow: 0 0 5px beige, 0 0 25px beige, 0 0 50px beige;
 }
 
 a{
@@ -149,6 +154,8 @@ a{
 .disabled {
     display: none;
 }
+
+/* Estilos html mas juegos */
 
 .container-titulo{
     display: flex;
@@ -186,6 +193,8 @@ a{
     text-shadow: 5px 5px 10px black;
 }
 
+/* Estilos mas juegos */
+
 .card{
     display: flex;
     flex-direction: column;
@@ -213,4 +222,26 @@ a{
     font-weight: 400;
     padding: 2px;
     margin: 2px;
+}
+
+.linea{
+    height: 5px;
+    border: none;
+    border-radius: 10px;
+    background: radial-gradient(circle, rgba(165,42,42,1) 20%, rgba(245,245,220,1) 80%);
+}
+
+/* SweetAlert2 */
+
+.ventanaPopup{
+    border-radius: 3rem;
+}
+
+.ventanaContenido, .ventanaTitulo{
+    color: brown;
+} 
+
+.ventanaImg{
+    border-radius: 20px;
+    border: double 10px brown;
 }
