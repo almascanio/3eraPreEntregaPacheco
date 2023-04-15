@@ -1,3 +1,5 @@
+// Datos de mas juegos 
+
 let datos = document.querySelector("#buttonDatos"); 
 
 datos.addEventListener("click", () => {

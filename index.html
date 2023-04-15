@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-
+    <!-- Encabezado del juego -->
     <header>
         <h1 class="titulo">Piedra, Papel o Tijera</h1>
         <p class="parrafo">¡Diviertete mucho!</p>
     </header>
+
+    <!-- Donde sucede el juego -->
     <main>
         <p class="instrucciones" id="instrucciones">
             El primero en llegar a 3 puntos gana
@@ -41,8 +43,11 @@
                 Tú usaste <span class="eleccion" id="eleccion-jugador">papel</span><br>
                 y el enemigo usó <span class="eleccion" id="eleccion-enemigo">papel</span>
             </p>
-            <p id="gana-punto">¡Ganaste un punto!</p>
+            <p id="gana-punto"></p>
         </div>
+
+        <!-- Boton para volver a jugar y tambien para ir a ver mas juegos -->
+        
         <button class="button disabled" id="reiniciar">Reiniciar juego</button>
         <a class="button disabled" id="verMas" href="./juegos.html">Ver más</a>
     </main>
