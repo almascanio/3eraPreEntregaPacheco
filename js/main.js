@@ -34,19 +34,11 @@ Swal.fire({
     confirmButtonColor: 'brown',
     showCancelButton: 'true',
 
-    customClass: {
-        popup: 'ventanaPopup',
-        header: '',
-        title: 'ventanaTitulo',
-        closeButton: '',
-        icon: '',
-        image: 'VentanaImg',
-        content: 'VentanaContenido',
-        input: '',
-        actions: '',
-        confirmButton: '',
-        cancelButoon: '',
-        footer: ''
+        customClass: {
+            popup: 'alert-popup',
+            title: 'alert-titulo',
+            image: 'alert-img',
+            content: 'alert-contenido'
     },
 });
 

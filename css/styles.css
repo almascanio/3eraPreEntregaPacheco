@@ -233,15 +233,19 @@ a{
 
 /* SweetAlert2 */
 
-.ventanaPopup{
+.alert-popup{
     border-radius: 3rem;
 }
 
-.ventanaContenido, .ventanaTitulo{
+.alert-titulo{
     color: brown;
 } 
 
-.ventanaImg{
-    border-radius: 20px;
+.alert-img{
+    border-radius: 50px;
     border: double 10px brown;
 }
+
+.alert-contenido{
+    color: brown;
+} 
