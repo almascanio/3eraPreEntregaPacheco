@@ -1,4 +1,4 @@
-// querySelector
+// variables, querySelector
 let puntosJugador = 0;
 let puntosEnemigo = 0;
 
@@ -42,6 +42,8 @@ Swal.fire({
     },
 });
 
+// Inicio del juego
+
 let ataquesJugador = document.querySelectorAll(".ataque");
 ataquesJugador.forEach(boton => {
     boton.addEventListener("click", iniciarJuego);
@@ -84,7 +86,6 @@ function iniciarJuego(evento) {
     } else {
         empate();
     }
-
 
     mensaje.classList.remove("disabled");
     mensajeEleccionJugador.innerText = eleccionJugador;
