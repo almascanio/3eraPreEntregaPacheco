@@ -19,7 +19,7 @@ let verMas = document.querySelector('#verMas');
 
 Swal.fire({
     title: 'Bienvenid@ al juego:',
-    text: 'Piedra, Papel o Tijera es uno de los juegos mas tradicionales en todo el mundo, espero te guste!',
+    text: '¡Piedra, Papel o Tijera es uno de los juegos más tradicionales en todo el mundo, espero te guste!',
     imageUrl: 'https://image.freepik.com/foto-gratis/ninos-jugando-papel-tijeras-piedra_23-2148210540.jpg',
     imageWidth: 400,
     imageHeight: 250,
